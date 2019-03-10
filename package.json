@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Default template for development by KindOfHeaven",
   "main": "index.js",
-  "repository": "https://github.com/KindOfHeaven/default-template",
+  "repository": "https://github.com/KindOfHeaven/site_capico.git",
   "author": "KindOfHeaven",
   "license": "MIT",
   "private": true,
