@@ -1,0 +1,11 @@
+mixin info(title, text, list)
+	.info
+		h2.info__title.animate._slideUp
+			span  #{title}
+		.info__text.animate
+			if text
+				p #{text}
+			if list
+				ul
+					each item in list
+						li #{item}

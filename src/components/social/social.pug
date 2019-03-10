@@ -1,0 +1,12 @@
+mixin social(socials)
+	include ../icon/icon.pug
+	.social-block
+		each social in socials
+			if social.mail
+				span.social.has-mail
+					a.mail-help(href="mailto: " + social.href) #{social.href}
+					+icon(social.icon)
+			else
+				a.social(href=social.href)
+					+icon(social.icon)
+

@@ -1,0 +1,8 @@
+mixin beta()
+	include ../icon/icon.pug
+	.beta-slide__inner
+		.beta-slide__inner--content
+			+info('БЕТА-ТЕСТИРОВАНИЕ', 'Мы активно тестируем платформу и будем рады получить обратную связь. Присоединяйтесь к нам и делитесь вашим мнением. Всех ранних пользователей ждут приятные бонусы после релиза!')
+			+button('Приступить', 'start')
+		.beta-slide__inner--telescope
+			+icon('telescope')

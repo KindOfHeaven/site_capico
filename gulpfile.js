@@ -24,6 +24,7 @@ const cssmin = require('gulp-clean-css');
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
+const rigger = require('gulp-rigger');
 
 // Image preparing
 const pngquant = require('imagemin-pngquant');
@@ -50,7 +51,7 @@ const path = {
         },
         src: { 
             html: ['src/pages/**/*.pug', '!src/pages/layout.pug'], 
-            js: 'src/**/*.js',
+            js: ['src/js/main.js'],
             css: 'src/styles/style.scss',
             img: ['src/assets/images/**/*.*', '!src/assets/images/svg'],
             fonts: 'src/assets/fonts/**/*.*'
@@ -117,16 +118,24 @@ gulp.task('css', function () {
 
 gulp.task('js', function () {
     return gulp.src(path.src.js)
+        .pipe(rigger().on( 'error', notify.onError(
+            {
+                message: "<%= error.message %>",
+                title  : "JavaScript Error!"
+            })))
         .pipe(babel({
-            presets: ['env']
+            presets: ['@babel/preset-env']
         }).on( 'error', notify.onError(
             {
                 message: "<%= error.message %>",
                 title  : "JavaScript Error!"
             }))
         )
-        .pipe(concat('main.js'))
-        .pipe(uglify())
+        .pipe(uglify().on( 'error', notify.onError(
+            {
+                message: "<%= error.message %>",
+                title  : "JavaScript Error!"
+            })))
         .pipe(gulp.dest(path.build.js))
 });
 

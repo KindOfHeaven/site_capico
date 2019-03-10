@@ -1,9 +1,12 @@
 // Main style's file.
 
+@import '../../node_modules/slick-carousel/slick/slick.scss';
+
 @import 'variables';
 @import 'mixins';
 @import 'fonts';
 @import 'reset';
+@import 'components';
 @import 'app';
 
 // Pages

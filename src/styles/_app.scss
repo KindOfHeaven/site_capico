@@ -1,0 +1,56 @@
+@include respond_above(lg) {
+	.animate {
+		&._left {
+			left: -50px;
+			-webkit-transition: left .5s linear .8s, opacity .5s linear .8s;
+		   	   -moz-transition: left .5s linear .8s, opacity .5s linear .8s;
+		   	    -ms-transition: left .5s linear .8s, opacity .5s linear .8s;
+		   	     -o-transition: left .5s linear .8s, opacity .5s linear .8s;
+		   	        transition: left .5s linear .8s, opacity .5s linear .8s;
+		}
+		&._right {
+			right: -50px;
+			-webkit-transition: right .5s linear .8s, opacity .5s linear .8s;
+		       -moz-transition: right .5s linear .8s, opacity .5s linear .8s;
+		        -ms-transition: right .5s linear .8s, opacity .5s linear .8s;
+		         -o-transition: right .5s linear .8s, opacity .5s linear .8s;
+		            transition: right .5s linear .8s, opacity .5s linear .8s;
+		}
+		&._bottom {
+			bottom: -30px;
+			-webkit-transition: bottom .5s linear .8s, opacity .5s linear .8s;
+		       -moz-transition: bottom .5s linear .8s, opacity .5s linear .8s;
+		        -ms-transition: bottom .5s linear .8s, opacity .5s linear .8s;
+		         -o-transition: bottom .5s linear .8s, opacity .5s linear .8s;
+		            transition: bottom .5s linear .8s, opacity .5s linear .8s;
+		}
+		&._top {
+			top: -30px;
+			-webkit-transition: top .5s linear .8s, opacity .5s linear .8s;
+		       -moz-transition: top .5s linear .8s, opacity .5s linear .8s;
+		        -ms-transition: top .5s linear .8s, opacity .5s linear .8s;
+		         -o-transition: top .5s linear .8s, opacity .5s linear .8s;
+		            transition: top .5s linear .8s, opacity .5s linear .8s;
+		}
+		&._slideUp span {
+			top: 70px !important;
+			-webkit-transition: top .5s linear .8s;
+			   -moz-transition: top .5s linear .8s;
+			    -ms-transition: top .5s linear .8s;
+			     -o-transition: top .5s linear .8s;
+			        transition: top .5s linear .8s;
+		}
+		position: relative;
+		opacity: 0;
+	}
+	.slick-active {
+		.animate {
+			&._left {left: 0 !important}
+			&._right {right: 0 !important}
+			&._bottom {bottom: 0 !important}
+			&._top {top: 0 !important}
+			&._slideUp span {top: 0 !important}
+			opacity: 1;
+		}
+	}
+}

@@ -1,0 +1,25 @@
+mixin contentBlock(icon, title, text, list, after)
+	if icon
+		.content-block._has-icon
+			.content-block__icon
+				img(src="./assets/images/content/icons/" + icon + ".png")
+			h2.content-block__title.animate !{title}
+			.content-block__text
+				if text
+					p.content-block__text !{text}
+				if list
+					ul
+						each item in list
+							li !{item}
+				.content-block__text--after !{after}
+	else
+		.content-block
+			h2.content-block__title.animate !{title}
+			.content-block__text
+				if text
+					p.content-block__text !{text}
+				if list
+					ul
+						each item in list
+							li !{item}
+				.content-block__text--after !{after}

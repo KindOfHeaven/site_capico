@@ -1,0 +1,4 @@
+mixin info-slide(info_blocks)
+	.info-slide__inner
+		each block in info_blocks
+			+contentBlock(block.icon, block.title, block.text,block.list, block.after)

@@ -1,0 +1,7 @@
+mixin compass()
+	include ../contentBlock/contentBlock.pug
+	.compass__inner
+		.compass__img
+			+icon('strip3')
+			img(src='./assets/images/template/compas.png' alt="compas")
+		+contentBlock('', 'Компас<super>*</super>', 'Показывает наглядную ситуацию по биржам и помогает легко оценить распределение активов в портфеле всего за несколько секунд', '', '<super>*</super>скоро')

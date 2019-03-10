@@ -1,0 +1,22 @@
+mixin home()
+	.home__inner
+		.home__inner--content
+			.home__moon
+				img(src="./assets/images/content/Moon.png", alt="moon")
+			.home__info
+				.home__info--logo
+					img(src="./assets/images/template/logo.png", alt="Logotype")
+				h2.home__info--subtitle платформа для криптовалютного трейдинга
+				p.home--text весь функционал сервиса доступен на демо-счете абсолютно бесплатно и без риска потери средств
+				+button('Попробовать сейчас', 'try_it_now')
+		.home__inner--crypto
+			p.home--text Используйте биткоин и другие криптовалюты для торговли на биржах
+			.home__crypto
+				.home__crypto--item
+					img(src="./assets/images/content/crypto/Binance.png")
+				.home__crypto--item
+					img(src="./assets/images/content/crypto/Bittrex.png")
+				.home__crypto--item
+					img(src="./assets/images/content/crypto/Exmo.png")
+				.home__crypto--item
+					img(src="./assets/images/content/crypto/Huobi.png")

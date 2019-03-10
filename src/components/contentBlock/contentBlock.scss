@@ -1,0 +1,281 @@
+.content-block {
+	max-width: 420px;
+	&.mb {
+		@include respond-above(sm){
+			padding-top: 70px;
+		}	
+	}
+	@media (max-height: 700px) {
+		max-width: 300px;
+	}
+	height: 200px;
+	@include respond-below(lg) {
+		max-width: none;
+		height: auto;
+		width: 100%;
+		padding-bottom: 150px;
+		@include respond-below(md) {
+			padding-bottom: 100px;
+		}
+		@include respond-below(sm) {
+			padding-bottom: 50px;
+		}
+		&:after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 8px;
+			background: radial-gradient(#413693 0%, transparent 70%);
+			position: absolute;
+			bottom: 8px;
+			left: -75px;
+			@include respond-below(sm) {
+				bottom: 6px;
+				height: 6px;
+				left: -50px;
+			}
+		}
+	}
+	display: flex;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-justify-content: flex-start;
+	        justify-content: flex-start;
+	-webkit-align-items: flex-start;
+	        align-items: flex-start;
+	position: relative;
+	.content-block__title {
+		text-transform: uppercase;
+		color: #6155e1;
+		font: 400 50px/1 $font, sans-serif;
+		margin-bottom: 18px;
+		&._slideUp {
+			position: relative;
+			@include respond-above(lg) {
+				position: absolute;
+			}
+			top: 0;
+			white-space: nowrap;
+			-ms-overflow-y: hidden;
+			    overflow-y: hidden;
+			padding-bottom: 10px;
+			width: 100%;
+			&:before {
+				bottom: 0;
+			}
+			& > span {
+				font: inherit;
+				color: inherit;
+				white-space: nowrap;
+				height: 100%;
+				display: block;
+				position: relative;
+				top: 0;
+			}
+		}
+		@media (max-height: 700px) {
+			font-size: 29px;
+		}
+		@media (max-height: 500px) {
+			font-size: 27px;
+			margin-bottom: 10px;
+		}
+		@include respond-below(lg) {
+			margin-bottom: 70px;
+			font-size: 58px;
+		}
+		@include respond-below(md) {
+			font-size: 35px;
+			margin-bottom: 30px;
+		}
+
+		@include respond-below(sm) {
+			font-size: 23px;
+			margin-bottom: 10px;
+		}
+	}
+	.content-block__text {
+		p {
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+			font: 400 23px/1.5 $font, sans-serif;
+			color: #fff;
+			@media (max-height: 700px) {
+				font-size: 17px;
+			}
+			@media (max-height: 500px) {
+				font-size: 15px;
+			}
+			@include respond-below(lg) {
+				font-size: 30px;
+			}
+			@include respond-below(md) {
+				font-size: 19px;
+			}
+
+		@include respond-below(sm) {
+			font-size: 14px;
+		}
+		}
+		ul {
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+			li {
+				&:before {
+					content: "-";
+					font: inherit;
+				}
+				font: 400 23px/1.5 $font, sans-serif;
+				color: #fff;
+				@media (max-height: 700px) {
+					font-size: 17px;
+				}
+				@media (max-height: 500px) {
+					font-size: 15px;
+				}
+				@include respond-below(lg) {
+					font-size: 30px;
+				}
+				@include respond-below(md) {
+					font-size: 19px;
+				}
+
+		@include respond-below(sm) {
+			font-size: 14px;
+		}
+			}
+		}
+	}
+	.content-block__text--after {
+		color: #6155e1;
+		font: 400 23px/1.5 $font, sans-serif;
+		@media (max-height: 700px) {
+			font-size: 17px;
+		}
+		@media (max-height: 500px) {
+			font-size: 15px;
+		}
+		@include respond-below(lg) {
+			font-size: 30px;
+		}
+		@include respond-below(md) {
+			font-size: 19px;
+		}
+		@include respond-below(sm) {
+			font-size: 14px;
+		}
+	}
+	&._has-icon {
+		margin-left: 200px;
+		@media (max-height: 700px)    {
+			margin-left: 100px;
+		}
+		@media (max-height: 500px)    {
+			margin-left: 0px;
+		}
+		@include respond-below(sm) {
+			margin-left: 100px;
+			width: calc(100% - 100px);
+		}
+		&:before {
+			position: absolute;
+			left: -45px;
+			top: 0;
+			content: "";
+			width: 4px;
+			height: 300px;
+			background: radial-gradient(#413693, transparent 90%);
+			@media (max-height: 700px) {
+				height: 250px;
+			}
+		}
+		@include respond-below(lg) {
+			&:before {
+				top: 0;
+				height: 300px;
+			}
+		}
+		@include respond-below(md) {
+			&:before {
+				height: 250px;
+			}
+		}
+		@include respond-below(sm) {
+			&:before {
+				left: -25px;
+				height: 200px;
+			}
+		}
+		.content-block__icon {
+			display: block;
+			width: auto;
+			height: 300px;
+			position: absolute;
+			top: 0;
+			overflow: hidden;
+			img {
+				width: auto;
+				height: 100%;
+			}
+			@media (max-height: 700px) {
+				height: 300px;
+			}
+			@include respond-below(lg) {
+				height: 300px;
+			}
+			@include respond-below(md) {
+				height: 250px;
+			}
+			@include respond-below(sm) {
+				height: 200px;
+			}
+			&.calculated {
+				@include respond-above(lg) {
+					img {
+						position: relative;
+						right: -100%;
+						-webkit-transition: right .5s linear .8s;
+			   			   -moz-transition: right .5s linear .8s;
+			   			    -ms-transition: right .5s linear .8s;
+			   			     -o-transition: right .5s linear .8s;
+			   			        transition: right .5s linear .8s;
+					}
+				}
+			}
+			@include respond-below(sm) {
+				// display: none;
+			}
+		}
+	}
+}
+.slick-active {
+	.content-block._has-icon {
+		.content-block__icon.calculated img {
+			right: 0;
+		}
+	}
+}
+
+
+
+.info-slide {
+	& + .info-slide {
+		.content-block._has-icon  .content-block__icon {
+			@media (max-height: 700px) {
+				height: 250px;
+			}
+		}
+		.content-block._has-icon {
+			&:first-child {
+				.content-block__icon {
+					@include respond-below(sm) {
+						height: 150px;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,1 +1,7 @@
 mixin header()
+	include ../button/button.pug
+	header.header
+		a.header__logotype(href="javascript:void(0)")
+			img(src="./assets/images/template/capico_logo.png", alt="Logotype")
+		.header__button
+			+button('Торговать', 'log_in')
